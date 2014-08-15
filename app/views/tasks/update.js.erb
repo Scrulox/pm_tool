@@ -1,0 +1,9 @@
+<% if !@task.save %>
+  $("#task_title_update_field").effect("highlight", {color: "red"});
+
+<% else %>
+  
+  $("div#<%= dom_id(@task) %> #task_title").text("<%= @task.title %>").effect("highlight", {}, 2000);
+  $("div#task_update_field").fadeOut();
+
+<% end %>

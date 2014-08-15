@@ -1,0 +1,11 @@
+<% if !@project.save %>
+
+  $("#update_title").effect("highlight", {color: "red"});
+
+<% else %>
+
+  $("div#<%= dom_id(@project)%> #project_title").text("<%= @project.title %>").effect("highlight", {}, 2000)
+  $("div#<%= dom_id(@project)%> #project_description").text("<%= @project.description %>").effect("highlight", {}, 2000)
+  $("div#project_update_form").fadeOut();
+
+<% end %>

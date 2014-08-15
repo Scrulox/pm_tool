@@ -1,0 +1,7 @@
+<% if @project.new_record? %>
+  $("#project_title_field").effect("highlight", {color:"red"});
+<% else %>
+  $("div#projects").append("<%= escape_javascript(render @project) %>");
+  $("div#<%= dom_id(@project) %>").effect("highlight"); 
+  $("#project_create_form")[0].reset();
+<% end %>

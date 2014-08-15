@@ -1,0 +1,17 @@
+<div id= "project_update_form" >
+  <%= form_for(@project, remote: true) do |f| %>
+    <div class="form-group">
+      <%= f.label :title, "Title" %>
+      <%= f.text_field :title, class: "form-control", id:"update_title" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :description, "Description" %>
+      <%= f.text_area :description, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit class: "btn btn-default" %>
+    </div>
+  <% end %>
+</div>

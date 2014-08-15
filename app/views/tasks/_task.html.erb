@@ -1,0 +1,11 @@
+<div class= "panel panel-info" id="<%= dom_id(task)%>">
+  <div class="panel-heading" id="task_title">
+    <%= task.title %>
+  </div>
+  <div class="panel-footer">
+    <div class = "btn-group btn-group-sm">
+      <%= link_to "Edit", edit_project_task_path(@project, task), remote: true, class: "btn btn-success" %>
+      <%= link_to "Destroy", [@project, task], method: :delete, data: {confirm: "Are you sure?"}, class: "btn-group-sm btn btn-danger", remote: true %>
+    </div>
+  </div>
+</div>

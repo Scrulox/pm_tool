@@ -1,0 +1,25 @@
+<div class="jumbotron" id="project_detail">
+  <h2><%= @project.title %></h2>
+  <p><%= @project.description %></p>
+</div>
+
+<div class="panel-group" id="accordion2">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          Add a task
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+        <%= render "create" %>
+      </div>
+    </div>
+  </div>
+
+  <br/>
+  <div id="tasks">
+    <%= render @project.tasks %>
+  </div>

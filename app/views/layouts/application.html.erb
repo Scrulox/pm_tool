@@ -7,15 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<ul class="nav nav-tabs" role="tablist">
-  <li><%= link_to "Home", homey_path %></li>
-  <li><%= link_to "About", about_path %></li>
-</ul>
-
-
-
-<%= yield %>
-
+<div class="container-fluid">
+  <ul class="nav nav-tabs" role="tablist">
+    <li><%= link_to "Project", projects_path %></li>
+  </ul>
+  <%= yield %>
+</div>
 </body>
 </html>
