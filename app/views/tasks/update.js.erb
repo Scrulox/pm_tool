@@ -4,6 +4,6 @@
 <% else %>
   
   $("div#<%= dom_id(@task) %> #task_title").text("<%= @task.title %>").effect("highlight", {}, 2000);
-  $("div#task_update_field").fadeOut();
+  $("div#task_udpate_form").fadeOut();
 
 <% end %>
