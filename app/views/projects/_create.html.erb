@@ -1,16 +1,18 @@
-<%= form_for(Project.new, remote: true, :html => {id: "project_create_form"}) do |f| %>
-  <div class="form-group">
-    <%= f.label :title, "Title" %>
-    <%= f.text_field :title, class: "form-control", id: "project_title_field", remote: true %>
-  </div>
+<div id="project_toggle">
+  <%= form_for(Project.new, remote: true, :html => {id: "project_create_form"}) do |f| %>
+    <div class="form-group">
+      <%= f.label :title, "Title" %>
+      <%= f.text_field :title, class: "form-control", id: "project_title_field", remote: true %>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :description, "Description" %>
-    <%= f.text_area :description, class: "form-control"  %>
-  </div>
+    <div class="form-group">
+      <%= f.label :description, "Description" %>
+      <%= f.text_area :description, class: "form-control"  %>
+    </div>
 
-  <div class="form-group">
-    <%= f.submit class: "btn btn-default" %>
-  </div>
-<% end %>
+    <div class="form-group">
+      <%= f.submit class: "btn btn-default" %>
+    </div>
+  <% end %>
+
 
